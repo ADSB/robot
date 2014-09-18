@@ -7,17 +7,58 @@ import java.util.ArrayList;
 
 public class RobotGame extends WindowedTemplate {
 
-	public static final int WIDTH_X = 12;
-	public static final int WIDTH_Y = 12;
+	private static int WIDTH_X = 12;
+	private static int WIDTH_Y = 12;
 
-	public static final int RADIUS_X = 37;
-	public static final int RADIUS_Y = 37;
+	private static int RADIUS_X = 37;
+	private static int RADIUS_Y = 37;
 
-	public static final int GRID_X = 2 * RADIUS_X + 1;
-	public static final int GRID_Y = 2 * RADIUS_Y + 1;
+	private static int GRID_X = 2 * RADIUS_X + 1;
+	private static int GRID_Y = 2 * RADIUS_Y + 1;
 
-	public static final int SCREEN_X = GRID_X * (WIDTH_X + 1) + 1;
-	public static final int SCREEN_Y = GRID_Y * (WIDTH_Y + 1) + 1;
+	private static int SCREEN_X = GRID_X * (WIDTH_X + 1) + 1;
+	private static int SCREEN_Y = GRID_Y * (WIDTH_Y + 1) + 1;
+
+	public static int getWidthX() {
+		return WIDTH_X;
+	}
+
+	public static int getWidthY() {
+		return WIDTH_Y;
+	}
+
+	public static int getRadiusX() {
+		return RADIUS_X;
+	}
+
+	public static int getRadiusY() {
+		return RADIUS_Y;
+	}
+
+	public static int getGridX() {
+		return GRID_X;
+	}
+
+	public static int getGridY() {
+		return GRID_Y;
+	}
+
+	public static int getScreenX() {
+		return SCREEN_X;
+	}
+
+	public static int getScreenY() {
+		return SCREEN_Y;
+	}
+
+	private void recalculateMetrics() {
+		GRID_X = 2 * RADIUS_X + 1;
+		GRID_Y = 2 * RADIUS_Y + 1;
+		SCREEN_X = GRID_X * (WIDTH_X + 1) + 1;
+		SCREEN_Y = GRID_Y * (WIDTH_Y + 1) + 1;
+		setPreferredSize(new Dimension(SCREEN_X, SCREEN_Y));
+		_parent.pack();
+	}
 
 	public static float cubicBezier(float t, float p0, float p1, float p2, float p3) {
 		float v = 1 - t;
@@ -34,8 +75,10 @@ public class RobotGame extends WindowedTemplate {
 	}
 
 	private static final int STATE_MENU = 1;
-	private static final int STATE_PLAYING = 2;
-	private static final int STATE_OVER = 3;
+	private static final int STATE_INSTRUCTIONS = 2;
+	private static final int STATE_OPTIONS = 3;
+	private static final int STATE_PLAYING = 4;
+	private static final int STATE_OVER = 5;
 
 	private static final Font TEXT_FONT = new Font("Courier", 0, 16);
 
@@ -45,6 +88,24 @@ public class RobotGame extends WindowedTemplate {
 		"Options",
 		"Quit"
 	};
+	private static final String[] INSTRUCTION_MESSAGE = {
+		"The player will start at the center of the screen.",
+		"Avoid RED robots.",
+		"Pick up GREEN pellets.",
+		"Use arrow keys to move the player."
+	};
+	private static final String[] OPTIONS_MESSAGES = {
+		"Pellets",
+		"Robots",
+		"Robot Handicap",
+		"Diagonal Robot Movement",
+		"Show Grid",
+		"Antialiasing",
+		"Horizontal Width",
+		"Vertical Width",
+		"Horizontal Radius",
+		"Vertical Radius"
+	};
 	private static final String LOSE_MESSAGE = "Game Over";
 	private static final String WIN_MESSAGE = "Victory";
 
@@ -52,10 +113,44 @@ public class RobotGame extends WindowedTemplate {
 	private static final Color GRID_COLOR = Color.decode("#404040");
 	private static final Color TEXT_COLOR = Color.decode("#70f070");
 
-	private static final int PELLET_CAP = 25;
-	private static final int ROBOT_CAP = 50	;
+	// configurable in Options
+	// widths and radii are configurable as well
+	private int PELLET_CAP = 25;
+	private int ROBOT_CAP = 50;
+	private boolean ROBOT_HANDICAP = true;
+	private boolean DIAGONAL_MOVEMENT = false;
+	private boolean SHOW_GRID = false;
+	private boolean ANTIALIASING = true;
+
+	private String getOption(int i) {
+		switch (i) {
+			case 0:
+				return PELLET_CAP + "";
+			case 1:
+				return ROBOT_CAP + "";
+			case 2:
+				return ROBOT_HANDICAP + "";
+			case 3:
+				return DIAGONAL_MOVEMENT + "";
+			case 4:
+				return SHOW_GRID + "";
+			case 5:
+				return ANTIALIASING + "";
+			case 6:
+				return WIDTH_X + "";
+			case 7:
+				return WIDTH_Y + "";
+			case 8:
+				return RADIUS_X + "";
+			case 9:
+				return RADIUS_Y + "";
+			default:
+				return "";
+		}
+	}
 
 	private int _selection;
+	private int _optionSelection;
 
 	private boolean _win = false;
 	private int _state = 0;
@@ -83,38 +178,156 @@ public class RobotGame extends WindowedTemplate {
 			@Override
 			public void keyPressed(KeyEvent keyEvent) {
 				_cheatCode.pushKey(keyEvent.getKeyCode());
-				if (_state == STATE_MENU) {
-					switch (keyEvent.getKeyCode()) {
-						case KeyEvent.VK_UP:
-							_selection--;
-							break;
-						case KeyEvent.VK_DOWN:
-							_selection++;
-							break;
-						case KeyEvent.VK_ENTER:
-							switch (_selection) {
-								case 0:
-									start();
-									break;
-								case 1:
-
-									break;
-								case 2:
-
-									break;
-								case 3:
-									System.exit(0);
-									break;
-								default:
-									break;
-							}
-							break;
-						default:
-							break;
-					}
-					_selection %= 4;
-					if (_selection < 0)
-						_selection += 4;
+				switch (_state) {
+					case STATE_MENU:
+						switch (keyEvent.getKeyCode()) {
+							case KeyEvent.VK_UP:
+								_selection--;
+								break;
+							case KeyEvent.VK_DOWN:
+								_selection++;
+								break;
+							case KeyEvent.VK_ENTER:
+								switch (_selection) {
+									case 0:
+										start();
+										break;
+									case 1:
+										_state = STATE_INSTRUCTIONS;
+										break;
+									case 2:
+										_state = STATE_OPTIONS;
+										break;
+									case 3:
+										System.exit(0);
+										break;
+									default:
+										break;
+								}
+								break;
+							default:
+								break;
+						}
+						_selection %= MENU_MESSAGES.length;
+						if (_selection < 0)
+							_selection += MENU_MESSAGES.length;
+						break;
+					case STATE_OPTIONS:
+						switch (keyEvent.getKeyCode()) {
+							case KeyEvent.VK_UP:
+								_optionSelection--;
+								break;
+							case KeyEvent.VK_DOWN:
+								_optionSelection++;
+								break;
+							case KeyEvent.VK_LEFT:
+								switch (_optionSelection) {
+									case 0:
+										if (PELLET_CAP > 1)
+											PELLET_CAP--;
+										break;
+									case 1:
+										if (ROBOT_CAP > 1)
+											ROBOT_CAP--;
+										break;
+									case 2:
+										ROBOT_HANDICAP = !ROBOT_HANDICAP;
+										break;
+									case 3:
+										DIAGONAL_MOVEMENT = !DIAGONAL_MOVEMENT;
+										break;
+									case 4:
+										SHOW_GRID = !SHOW_GRID;
+										break;
+									case 5:
+										ANTIALIASING = !ANTIALIASING;
+										break;
+									case 6:
+										if (WIDTH_X > 1) {
+											WIDTH_X--;
+											recalculateMetrics();
+										}
+										break;
+									case 7:
+										if (WIDTH_Y > 1) {
+											WIDTH_Y--;
+											recalculateMetrics();
+										}
+										break;
+									case 8:
+										if (RADIUS_X > 1) {
+											RADIUS_X--;
+											recalculateMetrics();
+										}
+										break;
+									case 9:
+										if (RADIUS_Y > 1) {
+											RADIUS_Y--;
+											recalculateMetrics();
+										}
+										break;
+									default:
+										break;
+								}
+								break;
+							case KeyEvent.VK_RIGHT:
+								switch (_optionSelection) {
+									case 0:
+										PELLET_CAP++;
+										break;
+									case 1:
+										ROBOT_CAP++;
+										break;
+									case 2:
+										ROBOT_HANDICAP = !ROBOT_HANDICAP;
+										break;
+									case 3:
+										DIAGONAL_MOVEMENT = !DIAGONAL_MOVEMENT;
+										break;
+									case 4:
+										SHOW_GRID = !SHOW_GRID;
+										break;
+									case 5:
+										ANTIALIASING = !ANTIALIASING;
+										break;
+									case 6:
+										WIDTH_X++;
+										recalculateMetrics();
+										break;
+									case 7:
+										WIDTH_Y++;
+										recalculateMetrics();
+										break;
+									case 8:
+										RADIUS_X++;
+										recalculateMetrics();
+										break;
+									case 9:
+										RADIUS_Y++;
+										recalculateMetrics();
+										break;
+									default:
+										break;
+								}
+								break;
+							default:
+								break;
+						}
+						_optionSelection %= OPTIONS_MESSAGES.length;
+						if (_optionSelection < 0)
+							_optionSelection += OPTIONS_MESSAGES.length;
+					case STATE_INSTRUCTIONS:
+					case STATE_OVER:
+						switch (keyEvent.getKeyCode()) {
+							case KeyEvent.VK_ENTER:
+								_state = STATE_MENU;
+								break;
+							default:
+								break;
+						}
+						break;
+					default:
+						break;
 				}
 			}
 
@@ -149,62 +362,23 @@ public class RobotGame extends WindowedTemplate {
 
 	@Override
 	public void updateFrame(Graphics2D g) {
-		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, ANTIALIASING ? RenderingHints.VALUE_ANTIALIAS_ON : RenderingHints.VALUE_ANTIALIAS_OFF);
 		drawBackground(g);
 		switch (_state) {
 			case STATE_MENU:
 				drawMenu(g);
 				break;
+			case STATE_INSTRUCTIONS:
+				drawInstructions(g);
+				break;
+			case STATE_OPTIONS:
+				drawOptions(g);
+				break;
 			case STATE_PLAYING:
-				drawGrid(g);
-
-				if (_cheatCode.isComplete() || _pellets.size() == 0) {
-					_win = true;
-					_state = STATE_OVER;
-					break;
-				}
-
-				if (_moveReady) {
-					_robotMatrix = new boolean[GRID_X][GRID_Y];
-					_robotParity = !_robotParity;
-					_queuedPellets = new ArrayList<Pellet>();
-
-					movePlayer();
-					moveRobots();
-
-					_moveReady = false;
-				}
-
-				for (Pellet p : _pellets) {
-					if (p.getX() == _player.getX() && p.getY() == _player.getY())
-						queuePelletRemoval(p);
-					else
-						p.draw(g);
-				}
-
-				commitPelletRemoval();
-
-				_player.draw(g);
-
-				for (Robot r : _robots) {
-					r.draw(g);
-					if (r.getX() == _player.getX() && r.getY() == _player.getY())
-						_state = STATE_OVER;
-				}
-
-				/*//Debugging
-				g.setColor(Color.WHITE);
-				for (int i = 0; i < _robotMatrix.length; i++) {
-					for (int j = 0; j < _robotMatrix[i].length; j++) {
-						g.drawString(_robotMatrix[i][j] ? "1" : "0", i * (WIDTH_X + 1), (j + 1) * (WIDTH_Y + 1));
-					}
-				}*/
-
+				drawGame(g);
 				break;
 			case STATE_OVER:
 				drawOver(g);
-				if (isAKeyDown(KeyEvent.VK_ENTER))
-					init();
 				break;
 			default:
 				break;
@@ -235,7 +409,7 @@ public class RobotGame extends WindowedTemplate {
 	}
 
 	private void moveRobots() {
-		if (_robotParity) {
+		if (!ROBOT_HANDICAP || _robotParity) {
 			int dx;
 			int dy;
 
@@ -254,16 +428,16 @@ public class RobotGame extends WindowedTemplate {
 						if (!_robotMatrix[r.getX() == GRID_X - 1 ? GRID_X - 1 : r.getX() + 1][r.getY()])
 							r.move(Robot.MOVE_RIGHT);
 					}
+					if (!DIAGONAL_MOVEMENT)
+						continue;
 				}
-				else {
-					if (dy > 0) {
-						if (!_robotMatrix[r.getX()][r.getY() == 0 ? 0 : r.getY() - 1])
-							r.move(Robot.MOVE_UP);
-					}
-					else if (dy < 0)
-						if (!_robotMatrix[r.getX()][r.getY() == 0 ? 0 : r.getY() + 1])
-							r.move(Robot.MOVE_DOWN);
+				if (dy > 0) {
+					if (!_robotMatrix[r.getX()][r.getY() == 0 ? 0 : r.getY() - 1])
+						r.move(Robot.MOVE_UP);
 				}
+				else if (dy < 0)
+					if (!_robotMatrix[r.getX()][r.getY() == 0 ? 0 : r.getY() + 1])
+						r.move(Robot.MOVE_DOWN);
 				_robotMatrix[r.getX()][r.getY()] = true;
 			}
 
@@ -283,6 +457,56 @@ public class RobotGame extends WindowedTemplate {
 		for (int i = 0; i <= GRID_Y; i++) {
 			g.drawLine(0, i * (WIDTH_Y + 1), SCREEN_X - 1, i * (WIDTH_Y + 1));
 		}
+	}
+
+	private void drawGame(Graphics2D g) {
+		if (SHOW_GRID) {
+			drawGrid(g);
+		}
+
+		if (_cheatCode.isComplete() || _pellets.size() == 0) {
+			_win = true;
+			_state = STATE_OVER;
+		}
+		else {
+
+			if (_moveReady) {
+				_robotMatrix = new boolean[GRID_X][GRID_Y];
+				_robotParity = !_robotParity;
+				_queuedPellets = new ArrayList<Pellet>();
+
+				movePlayer();
+				moveRobots();
+
+				_moveReady = false;
+			}
+
+		}
+
+		for (Pellet p : _pellets) {
+			if (p.getX() == _player.getX() && p.getY() == _player.getY())
+				queuePelletRemoval(p);
+			else
+				p.draw(g);
+		}
+
+		commitPelletRemoval();
+
+		_player.draw(g);
+
+		for (Robot r : _robots) {
+			r.draw(g);
+			if (r.getX() == _player.getX() && r.getY() == _player.getY())
+				_state = STATE_OVER;
+		}
+
+		/*//Debugging
+		g.setColor(Color.WHITE);
+		for (int i = 0; i < _robotMatrix.length; i++) {
+			for (int j = 0; j < _robotMatrix[i].length; j++) {
+				g.drawString(_robotMatrix[i][j] ? "1" : "0", i * (WIDTH_X + 1), (j + 1) * (WIDTH_Y + 1));
+			}
+		}*/
 	}
 
 	private void drawMenu(Graphics2D g) {
@@ -324,18 +548,39 @@ public class RobotGame extends WindowedTemplate {
 
 	}
 
-	private void drawInfo(Graphics2D g) {
+	private void drawInstructions(Graphics2D g) {
 		g.setFont(TEXT_FONT);
+		g.setColor(TEXT_COLOR);
+
 		FontMetrics metrics = g.getFontMetrics();
 
 		int height = metrics.getHeight();
 
-		int selectX = (SCREEN_X - metrics.stringWidth(MENU_MESSAGES[_selection])) / 2 - 3;
-		int selectY = (SCREEN_Y - 3 * height + (_selection - MENU_MESSAGES.length / 2 + 1) * height * 4) / 2 + 1;
+		for (int i = 0; i < INSTRUCTION_MESSAGE.length; i++) {
+			g.drawString(
+				INSTRUCTION_MESSAGE[i],
+				(SCREEN_X - metrics.stringWidth(INSTRUCTION_MESSAGE[i])) / 2,
+				(SCREEN_Y - height + (i - INSTRUCTION_MESSAGE.length / 2 + 1) * height * 4) / 2
+			);
+		}
+
+	}
+
+	private void drawOptions(Graphics2D g) {
+		g.setFont(TEXT_FONT);
+		FontMetrics metrics = g.getFontMetrics();
+
+		String plusOption = OPTIONS_MESSAGES[_optionSelection] + ": " + getOption(_optionSelection);
+
+		int height = metrics.getHeight();
+
+		int selectX = (SCREEN_X - metrics.stringWidth(plusOption)) / 2 - 3;
+		int selectY = (SCREEN_Y - 3 * height + (_optionSelection - OPTIONS_MESSAGES.length / 2 + 1) * height * 4) / 2 + 1;
 		int selectH = height + 4;
-		int selectW = metrics.stringWidth(MENU_MESSAGES[_selection]) + 6;
+		int selectW = metrics.stringWidth(plusOption) + 6;
 
 		g.setColor(Color.getHSBColor(.333f, getBrightness() / 2 + .4f, getBrightness() / 3 + .2f));
+
 		g.fillRect(
 			selectX,
 			selectY,
@@ -352,11 +597,12 @@ public class RobotGame extends WindowedTemplate {
 			selectH
 		);
 
-		for (int i = 0; i < MENU_MESSAGES.length; i++) {
+		for (int i = 0; i < OPTIONS_MESSAGES.length; i++) {
+			plusOption = OPTIONS_MESSAGES[i] + ": " + getOption(i);
 			g.drawString(
-				MENU_MESSAGES[i],
-				(SCREEN_X - metrics.stringWidth(MENU_MESSAGES[i])) / 2,
-				(SCREEN_Y - height + (i - MENU_MESSAGES.length / 2 + 1) * height * 4) / 2
+				plusOption,
+				(SCREEN_X - metrics.stringWidth(plusOption)) / 2,
+				(SCREEN_Y - height + (i - OPTIONS_MESSAGES.length / 2 + 1) * height * 4) / 2
 			);
 		}
 
@@ -371,6 +617,5 @@ public class RobotGame extends WindowedTemplate {
 
 		g.drawString(message, ((SCREEN_X - metrics.stringWidth(message)) / 2), ((SCREEN_Y - metrics.getHeight()) / 2));
 	}
-
 
 }

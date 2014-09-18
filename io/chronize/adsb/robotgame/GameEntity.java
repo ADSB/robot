@@ -28,11 +28,11 @@ public abstract class GameEntity extends Sprite {
 					_y--;
 				break;
 			case MOVE_RIGHT:
-				if (_x < RobotGame.GRID_X - 1)
+				if (_x < RobotGame.getGridX() - 1)
 					_x++;
 				break;
 			case MOVE_DOWN:
-				if (_y < RobotGame.GRID_Y - 1)
+				if (_y < RobotGame.getGridY() - 1)
 					_y++;
 				break;
 			case MOVE_LEFT:
@@ -47,6 +47,6 @@ public abstract class GameEntity extends Sprite {
 	@Override
 	public void draw(Graphics2D g) {
 		g.setColor(_color);
-		g.fillRect(_x * (RobotGame.WIDTH_X + 1) + 1, _y * (RobotGame.WIDTH_Y + 1) + 1, RobotGame.WIDTH_X, RobotGame.WIDTH_Y);
+		g.fillRect(_x * (RobotGame.getWidthX() + 1) + 1, _y * (RobotGame.getWidthY() + 1) + 1, RobotGame.getWidthX(), RobotGame.getWidthY());
 	}
 }

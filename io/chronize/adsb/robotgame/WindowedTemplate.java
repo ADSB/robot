@@ -3,7 +3,6 @@ package io.chronize.adsb.robotgame;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.sql.Time;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -12,29 +11,32 @@ public abstract class WindowedTemplate extends GameTemplate {
 	protected boolean _moveReady = false;
 	protected int _keyframes;
 	protected Timer _timer;
+	protected Frame _parent;
 
 	public WindowedTemplate() {
 		super();
 	}
 
-	public static void createGameFrame(GameTemplate game, int width, int height) {
-		Frame frame = new Frame();
+	public static void createGameFrame(WindowedTemplate game, int width, int height) {
+		game._parent = new Frame();
 
-		frame.setBackground(Color.white);
+		game._parent.setBackground(Color.white);
 
 		game.setPreferredSize(new Dimension(width, height));
-		frame.add(game);
-		frame.pack();
+		game._parent.add(game);
+		game._parent.pack();
 
 		game.addKeyListener(game);
 
-		frame.addWindowListener(new WindowAdapter() {
+		game._parent.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 			}
 		});
 
-		frame.setVisible(true);
+		game._parent.setResizable(false);
+
+		game._parent.setVisible(true);
 		game.requestFocus();
 	}
 

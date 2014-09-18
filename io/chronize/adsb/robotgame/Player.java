@@ -5,8 +5,8 @@ import java.awt.*;
 public class Player extends GameEntity {
 
 	public Player() {
-		_x = RobotGame.RADIUS_X + 1;
-		_y = RobotGame.RADIUS_Y + 1;
+		_x = RobotGame.getRadiusX() + 1;
+		_y = RobotGame.getRadiusY() + 1;
 	}
 
 	@Override

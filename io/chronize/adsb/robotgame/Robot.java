@@ -9,8 +9,8 @@ public class Robot extends GameEntity {
 		_color = Color.decode("#f07070");
 
 		Random random = new Random();
-		_x = random.nextInt(RobotGame.GRID_X);
-		_y = random.nextInt(RobotGame.GRID_Y);
+		_x = random.nextInt(RobotGame.getGridX());
+		_y = random.nextInt(RobotGame.getGridY());
 	}
 
 	@Override
