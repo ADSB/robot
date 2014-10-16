@@ -3,6 +3,7 @@ package io.chronize.adsb.robotgame;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
 import java.util.ArrayList;
 
 public class RobotGame extends WindowedTemplate {
@@ -80,7 +81,15 @@ public class RobotGame extends WindowedTemplate {
 	private static final int STATE_PLAYING = 4;
 	private static final int STATE_OVER = 5;
 
-	private static final Font TEXT_FONT = new Font("Courier", 0, 16);
+	private static final Font TEXT_FONT;
+	static {
+		try {
+			TEXT_FONT = Font.createFont(Font.PLAIN, new File("drift.ttf")).deriveFont(24.f);
+		}
+		catch (Exception e) {
+			throw new RuntimeException("Font load unsuccessful");
+		}
+	}
 
 	private static final String[] MENU_MESSAGES = {
 		"Play Game",
@@ -155,6 +164,8 @@ public class RobotGame extends WindowedTemplate {
 	private boolean _win = false;
 	private int _state = 0;
 
+	private boolean _paused = false;
+
 	private boolean _robotParity = false;
 	private boolean[][] _robotMatrix;
 
@@ -211,6 +222,15 @@ public class RobotGame extends WindowedTemplate {
 						_selection %= MENU_MESSAGES.length;
 						if (_selection < 0)
 							_selection += MENU_MESSAGES.length;
+						break;
+					case STATE_PLAYING:
+						switch (keyEvent.getKeyCode()) {
+							case KeyEvent.VK_SPACE:
+								_paused = !_paused;
+								break;
+							default:
+								break;
+						}
 						break;
 					case STATE_OPTIONS:
 						switch (keyEvent.getKeyCode()) {
@@ -351,6 +371,7 @@ public class RobotGame extends WindowedTemplate {
 		_win = false;
 		_player = new Player();
 		_robots = new ArrayList<Robot>();
+		_paused = false;
 		for (int i = 0; i < ROBOT_CAP; i++) {
 			_robots.add(new Robot());
 		}
@@ -470,15 +491,17 @@ public class RobotGame extends WindowedTemplate {
 		}
 		else {
 
-			if (_moveReady) {
-				_robotMatrix = new boolean[GRID_X][GRID_Y];
-				_robotParity = !_robotParity;
-				_queuedPellets = new ArrayList<Pellet>();
+			if (!_paused) {
+				if (_moveReady) {
+						_robotMatrix = new boolean[GRID_X][GRID_Y];
+						_robotParity = !_robotParity;
+						_queuedPellets = new ArrayList<Pellet>();
 
-				movePlayer();
-				moveRobots();
+						movePlayer();
+						moveRobots();
 
-				_moveReady = false;
+						_moveReady = false;
+				}
 			}
 
 		}
@@ -500,6 +523,9 @@ public class RobotGame extends WindowedTemplate {
 				_state = STATE_OVER;
 		}
 
+		if (_paused)
+			drawPaused(g);
+
 		/*//Debugging
 		g.setColor(Color.WHITE);
 		for (int i = 0; i < _robotMatrix.length; i++) {
@@ -507,6 +533,14 @@ public class RobotGame extends WindowedTemplate {
 				g.drawString(_robotMatrix[i][j] ? "1" : "0", i * (WIDTH_X + 1), (j + 1) * (WIDTH_Y + 1));
 			}
 		}*/
+	}
+
+	private void drawPaused(Graphics2D g) {
+		g.setFont(TEXT_FONT);
+		g.setColor(TEXT_COLOR);
+		FontMetrics metrics = g.getFontMetrics();
+
+		g.drawString("Paused", (SCREEN_X - metrics.stringWidth("Paused")) / 2, (SCREEN_Y - metrics.getHeight()) / 2);
 	}
 
 	private void drawMenu(Graphics2D g) {

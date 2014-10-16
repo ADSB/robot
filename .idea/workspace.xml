@@ -29,31 +29,29 @@
       <file leaf-file-name="RobotGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/RobotGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5730337" vertical-offset="5217" max-vertical-offset="14007">
-              <caret line="265" column="65" selection-start-line="265" selection-start-column="65" selection-end-line="265" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.68476355" vertical-offset="11132" max-vertical-offset="15203">
+              <caret line="501" column="0" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#885#886#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+                <element signature="e#962#963#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#9318#9319#0" expanded="true" />
+                <element signature="e#9346#9347#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="391">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KonamiMarshal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/KonamiMarshal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="966">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -95,23 +93,9 @@
       <file leaf-file-name="GameEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1242">
+            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1242">
               <caret line="49" column="139" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowedTemplate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="1610">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#733#829#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -122,22 +106,6 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="changedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/GameSprite.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/GameTemplate.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/KonamiMarshal.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/Robot.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/Player.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/Pellet.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/GameClient.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java" />
-        <option value="$PROJECT_DIR$/io/chronize/adsb/robotgame/RobotGame.java" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
@@ -253,6 +221,9 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -401,7 +372,7 @@
       <node-options />
       <gulpfile />
       <tasks />
-      <pass-parent-env-vars>false</pass-parent-env-vars>
+      <pass-parent-envs>true</pass-parent-envs>
       <envs />
       <method />
     </configuration>
@@ -581,41 +552,44 @@
       <workItem from="1410734735673" duration="13304000" />
       <workItem from="1410961985115" duration="223000" />
       <workItem from="1410962231511" duration="41000" />
+      <workItem from="1413303503359" duration="359000" />
+      <workItem from="1413420964488" duration="1997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39137000" />
+    <option name="totallyTimeSpent" value="41493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17760417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.088541664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3556263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35569754" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -646,12 +620,84 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/KonamiMarshal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="966">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="644">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="552">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Pellet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="644">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1242">
+          <caret line="49" column="139" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1633">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/RobotGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14007">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -714,8 +760,96 @@
           <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#733#829#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/RobotGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14007">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="391">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/KonamiMarshal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="966">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="644">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="552">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Pellet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="644">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1242">
+          <caret line="49" column="139" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="1610">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,6 +860,24 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,8 +940,6 @@
           <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#733#829#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,6 +950,24 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,8 +1022,6 @@
           <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#733#829#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -866,6 +1032,24 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,14 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1242">
-          <caret line="49" column="139" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/Pellet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="644">
@@ -944,9 +1120,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0253863" vertical-offset="129" max-vertical-offset="1518">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="556" max-vertical-offset="1242">
+          <caret line="49" column="139" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/KonamiMarshal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="305" max-vertical-offset="966">
+        <state vertical-scroll-proportion="0.39072847" vertical-offset="60" max-vertical-offset="966">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding />
         </state>
@@ -954,30 +1148,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+        <state vertical-scroll-proportion="0.12693156" vertical-offset="0" max-vertical-offset="906">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/WindowedTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="1610">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#733#829#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/io/chronize/adsb/robotgame/RobotGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5730337" vertical-offset="5217" max-vertical-offset="14007">
-          <caret line="265" column="65" selection-start-line="265" selection-start-column="65" selection-end-line="265" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.68476355" vertical-offset="11132" max-vertical-offset="15203">
+          <caret line="501" column="0" selection-start-line="501" selection-start-column="0" selection-end-line="501" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#9318#9319#0" expanded="true" />
+            <element signature="e#9346#9347#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1071,4 +1271,3 @@
     </states>
   </component>
 </project>
-
