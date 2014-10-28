@@ -131,7 +131,7 @@ public class RobotGame extends WindowedTemplate {
 			brightness = 1000 - brightness;
 
 		// ease-out
-		return cubicBezier((float) (brightness) / 500, 0.f, 0.f, .58f, 1.f);
+		return cubicBezier((float)(brightness) / 500, 0.f, 0.f, .58f, 1.f);
 	}
 
 	private static final int STATE_MENU = 1;
