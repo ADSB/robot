@@ -6,8 +6,10 @@ import java.util.Random;
 public class Pellet extends GameEntity {
 
 	public Pellet() {
+		// Pellets are green
 		_color = Color.decode("#70f070");
 
+		// Start at random position
 		Random random = new Random();
 		_x = random.nextInt(RobotGame.getGridX());
 		_y = random.nextInt(RobotGame.getGridY());

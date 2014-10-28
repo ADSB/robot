@@ -5,6 +5,7 @@ import java.awt.*;
 public class Player extends GameEntity {
 
 	public Player() {
+		// Start at center of screen
 		_x = RobotGame.getRadiusX() + 1;
 		_y = RobotGame.getRadiusY() + 1;
 	}

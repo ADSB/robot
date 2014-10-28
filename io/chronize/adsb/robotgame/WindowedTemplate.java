@@ -17,6 +17,13 @@ public abstract class WindowedTemplate extends GameTemplate {
 		super();
 	}
 
+	/**
+	 * Create a windowed frame for a game
+	 *
+	 * @param game Game object
+	 * @param width Window width
+	 * @param height Window height
+	 */
 	public static void createGameFrame(WindowedTemplate game, int width, int height) {
 		game._parent = new Frame();
 

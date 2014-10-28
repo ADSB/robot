@@ -6,8 +6,10 @@ import java.util.Random;
 public class Robot extends GameEntity {
 
 	public Robot() {
+		// Robots are red
 		_color = Color.decode("#f07070");
 
+		// Start at random position
 		Random random = new Random();
 		_x = random.nextInt(RobotGame.getGridX());
 		_y = random.nextInt(RobotGame.getGridY());

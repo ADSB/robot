@@ -21,6 +21,11 @@ public abstract class GameEntity extends Sprite {
 		return _y;
 	}
 
+	/**
+	 *  Move GameEntity in direction
+	 *
+	 *  @param direction Direction in which to move
+	 */
 	public void move(int direction) {
 		switch (direction) {
 			case MOVE_UP:
@@ -44,6 +49,11 @@ public abstract class GameEntity extends Sprite {
 		}
 	}
 
+	/**
+	 *  Move GameEntity in direction
+	 *
+	 *  @param g Graphics object
+	 */
 	@Override
 	public void draw(Graphics2D g) {
 		g.setColor(_color);
